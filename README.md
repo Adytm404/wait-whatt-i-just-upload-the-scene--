@@ -1,20 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Anime Scene Finder
 
-# Run and deploy your AI Studio app
+Aplikasi web untuk melacak sumber adegan anime dari tangkapan layar. Pengguna dapat mengunggah gambar (atau cukup *paste* dari *clipboard*), dan aplikasi akan mengidentifikasi anime, episode, dan stempel waktu yang tepat dari adegan tersebut.
 
-This contains everything you need to run your app locally.
+## Fitur Utama
 
-View your app in AI Studio: https://ai.studio/apps/drive/1_Pvk7rKFAf8adx4LBQVOtFGmZnVezZTL
+* **Pencarian Adegan:** Mengidentifikasi anime, episode, dan stempel waktu dari gambar adegan.
+* **Berbagai Metode Input:**
+    * Unggah file gambar standar.
+    * Fungsionalitas *Drag-and-drop* gambar ke jendela browser.
+    * Tempel (*paste*) gambar langsung dari *clipboard* (misalnya, setelah mengambil *screenshot*).
+* **Tampilan Hasil Interaktif:**
+    * Menampilkan daftar hasil yang cocok dengan persentase kesamaan, *thumbnail*, dan info episode.
+    * Memutar pratinjau video dari adegan yang ditemukan.
+    * Mengambil dan menampilkan detail anime lengkap (judul, deskripsi, genre, studio) dari AniList.
 
-## Run Locally
+## Teknologi & Layanan yang Digunakan
 
-**Prerequisites:**  Node.js
+* **Frontend:** React, Vite, TypeScript
+* **Styling:** Tailwind CSS, Font Awesome
+* **Layanan API:**
+    * **`tmpfiles.org`**: Untuk hosting gambar sementara yang diunggah pengguna.
+    * **`trace.moe`**: API inti untuk melakukan pencarian gambar adegan anime.
+    * **`anilist.co` (GraphQL)**: Untuk mengambil metadata dan detail anime.
 
+## Cara Menjalankan Secara Lokal
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**Prasyarat:** [Node.js](https://nodejs.org/)
+
+1.  **Instal dependensi:**
+    ```bash
+    npm install
+    ```
+   
+
+2.  **Jalankan server pengembangan:**
+    ```bash
+    npm run dev
+    ```
+   
+
+3.  Buka browser Anda dan kunjungi `http://localhost:3000` (sesuai konfigurasi di `vite.config.ts`).
