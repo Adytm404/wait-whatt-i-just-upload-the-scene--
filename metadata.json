@@ -1,0 +1,5 @@
+{
+  "name": "Anime Scene Finder",
+  "description": "An application to trace back the source of an anime scene from a screenshot. Users can upload an image, and the app will identify the anime, episode, and timestamp.",
+  "requestFramePermissions": []
+}
